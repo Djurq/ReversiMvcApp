@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Djurr\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj": {}
+    "C:\\Users\\Gebruiker\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Djurr\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj": {
+    "C:\\Users\\Gebruiker\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Djurr\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj",
+        "projectUniqueName": "C:\\Users\\Gebruiker\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj",
         "projectName": "ReversiMvcApp",
-        "projectPath": "C:\\Users\\Djurr\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj",
-        "packagesPath": "C:\\Users\\Djurr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Djurr\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\obj\\",
+        "projectPath": "C:\\Users\\Gebruiker\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\ReversiMvcApp.csproj",
+        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gebruiker\\RiderProjects\\ReversiMvcApp\\ReversiMvcApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Djurr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,15 +73,14 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.29, 3.1.29]"
+              "version": "[3.1.22, 3.1.22]"
             }
           ],
           "frameworkReferences": {
@@ -92,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
