@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ReversiMvcApp.Models;
 
-namespace ReversiMvcApp.DAL
+namespace ReversiMvcApp.Data
 {
     public class ReversiDbContext : DbContext
     {

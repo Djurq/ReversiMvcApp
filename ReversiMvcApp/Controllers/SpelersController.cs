@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ReversiMvcApp.DAL;
+using ReversiMvcApp.Data;
 using ReversiMvcApp.Models;
 
 namespace ReversiMvcApp.Controllers
@@ -26,7 +26,7 @@ namespace ReversiMvcApp.Controllers
         }
 
         // GET: Spelers/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string? id)
         {
             if (id == null)
             {
