@@ -80,7 +80,7 @@ namespace ReversiMvcApp.Controllers
 
             Spel spel = _reversiRestApiService.JoinSpel(id, gebruikerId);
 
-            return RedirectToAction(nameof(Play), new {id = spel.token});
+            return RedirectToAction(nameof(Speel), new {id = spel.token});
         }
 
         [HttpGet]
@@ -107,6 +107,44 @@ namespace ReversiMvcApp.Controllers
             var gebruikerId = gebruiker.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             Speler speler1 = _reversiDbContext.Spelers.FirstOrDefault(s => s.GUID == spel.speler1Token);
+            Speler speler2 = _reversiDbContext.Spelers.FirstOrDefault(s => s.GUID == spel.speler2Token);
+            
+            if (speler1 == null || speler2 == null)
+            {
+                return NotFound();
+            }
+
+            if (gebruikerId != spel.beurt)
+            {
+                return Unauthorized();
+            }
+
+            int puntenSpeler1 = spel.bord.Count(p => p.Value == 1);
+            int puntenSpeler2 = spel.bord.Count(p => p.Value == 2);
+
+            if (puntenSpeler1 > puntenSpeler2)
+            {
+                speler1.AantalGewonnen += 1;
+                speler2.AantalVerloren += 1;
+            }else if (puntenSpeler2 > puntenSpeler1)
+            {
+                speler2.AantalGewonnen += 1;
+                speler1.AantalVerloren += 1;
+            }
+            else
+            {
+                speler1.AantalGelijk += 1;
+                speler2.AantalGelijk += 1;
+            }
+
+            await _reversiDbContext.SaveChangesAsync();
+
+            if (!_reversiRestApiService.Delete(id, gebruikerId))
+            {
+                return BadRequest();
+            }
+
+            return Ok();
         }
     }
 }

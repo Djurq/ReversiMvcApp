@@ -34,6 +34,7 @@ namespace ReversiMvcApp
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddDbContext<ReversiDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ReversiDb")));
+            services.AddSingleton(new ReversiRestApiService());
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

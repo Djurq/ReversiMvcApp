@@ -86,7 +86,7 @@ namespace ReversiMvcApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GUID,Naam,AantalGewonnen,AantalVerloren,AantalGelijk")] Speler speler)
+        public async Task<IActionResult> Edit(string id, [Bind("GUID,Naam,AantalGewonnen,AantalVerloren,AantalGelijk")] Speler speler)
         {
             if (id != speler.GUID)
             {
@@ -117,7 +117,7 @@ namespace ReversiMvcApp.Controllers
         }
 
         // GET: Spelers/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string? id)
         {
             if (id == null)
             {
@@ -145,7 +145,7 @@ namespace ReversiMvcApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SpelerExists(int id)
+        private bool SpelerExists(string id)
         {
             return _context.Spelers.Any(e => e.GUID == id);
         }
